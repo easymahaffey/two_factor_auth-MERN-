@@ -1,0 +1,14 @@
+.hamburger {
+    height: 2em;
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.patty {
+    height: 0.35em;
+    width: 100%;
+    background-color: var(--light-text-brown);
+}

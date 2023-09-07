@@ -1,0 +1,114 @@
+.init-nav {
+    justify-content: flex-end;
+    padding-right: 3em;
+}
+
+.init-nav > button {
+    width: 12vw;
+}
+
+.init-nav > .modal-wrapper {
+    border: none;
+    background-color: rgb(248, 218, 206);
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    border-radius: 0.5em;
+    position: absolute;
+    z-index: 5;
+    top: 2em;
+    left: 37vw;
+}
+
+.init-nav > .modal-wrapper > button {
+    border: none;
+    height: 2em;
+    width: 3em;
+    background-color: inherit;
+    align-self: flex-end;
+    margin-right: 1em;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    padding-left: 1.2em;
+    border-radius: 0.5em;
+}
+
+.init-nav > .modal-wrapper > button:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-bottom: 1.5em;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > h3 {
+    text-align: center;
+    padding: 1em;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > form > input {
+    padding: 0.70em;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > form > button {
+  margin-top: .2em;
+  padding: 1em;
+  background-color: seagreen;
+  color: white;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > form > button:hover {
+    background-color: darkgreen;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > button {
+    padding: 1em;
+    margin-top: 3em;
+    background-color: seagreen;
+    color: white;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > #securityButton > button {
+    padding: 1em;
+    margin-top: 3em;
+    background-color: red;
+    color: white;
+}
+
+.init-nav > .modal-wrapper > .form-wrapper > button:hover {
+    background-color: darkgreen;
+}
+
+@media only screen and (max-width: 800px){
+    .init-nav > .modal-wrapper {
+        width: 62vw;
+        left: 19vw;
+    }
+    .init-nav > .modal-wrapper > .form-wrapper {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .init-nav > .modal-wrapper {
+        width: 100vw;
+        left: 0;
+    }
+    .init-nav > .modal-wrapper > .form-wrapper {
+        width: 98vw;
+    } 
+}

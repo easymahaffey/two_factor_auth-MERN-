@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.js" ></script>    
+    <script src="script.js" defer></script>
+    <!-- <script src="/luhnAlgorithm.js" defer></script> -->
+    <title>Luhn Generator</title>
+</head>
+<body>
+    <h1>ID Project</h1>
+    <hr>
+    <h1>Luhn Generator</h1>
+    <div id="display">
+      <label for="generator">Select the number of places between <br>2-32 to be generated (default is 16): <br>
+        <input type="number" id="generator-input" 
+        min="2" 
+        max="32" 
+        step="1" 
+        value="16">
+        </input>
+      </label>
+      <br><br>
+      <p id="luhn-generator">0</p><button id="generator-btn">Generate luhn number</button>
+      <br><br>
+
+      <div class="accordion" id="accordion">
+        <div class="card">
+          <div class="card-header bg-secondary m-0" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link btn-transparent text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"aria-expanded="false" aria-controls="collapseThree">
+                View generator code
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              <p>
+                const createLuhnCode = length => { <br>
+                  let code = []<br>
+                  while(code.length < length) {<br>
+                      code.push(Math.ceil(Math.random() * 9))<br>
+                  }<br>
+                  let checkDigit = code.map((dig, i) => i % 2 <br>== 0 ? dig : dig * 2)<br>
+                      .map(num => num.toString())<br>
+                      .map(num => num.length > 1 ? num.split<br>('') : num)<br>
+                      .map(num => num.length > 1 ? num.reduce(<br>(a, b) => +a + +b, 0) : +num)<br>
+                      .reduce((a, b) => a + b, 0) * 9 % 10<br>
+                  code.push(checkDigit)<br>
+                  return code.join('')<br>
+              }<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr>
+    <form id="form">
+        <h2>Luhn Tester input:</h2>
+        <input id=" testInputOne" type="text" placeholder="enter number here">
+        <button id="submitBtnOne"  type="submit">Run test</button>
+        <p>This luhn number is<span id="testResultOne"></span></p>
+        
+        <div class="accordion" id="accordion">
+          <div class="card">
+            <div class="card-header bg-secondary m-0" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-transparent text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"aria-expanded="false" aria-controls="collapseOne">
+                  View first validator code
+                </button>
+              </h2>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+                  const testLuhnAlgorithm = str => { <br>
+                    str = str.split('')<br>
+                    let checkDigit = str.pop()<br>
+                    let checkSum = str.map(dig => +dig)
+                        .map((dig, i) => i % 2 == 0 ? dig : dig * 2)<br>
+                        .map(num => num.toString())<br>
+                        .map(num => num.length > 1 ? num.<br>split('') : num)<br>
+                        .map(num => num.length > 1 ? num.<br>reduce((a, b) => +a + +b, 0) : <br>+num)<br>
+                        .reduce((a, b) => a + b, 0)<br>
+                    return (checkSum * 9) % 10 == <br>checkDigit<br>
+                    }<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Alphanumeric Luhn Tester input:</h2>
+        <input id="userInputTwo" type="text" placeholder="enter number here">
+        <button id="submitBtnTwo"  type="submit">Run check</button>
+        <p>This alphanumeric luhn number is <span id="resultTwo"></span></p>
+
+        <div class="accordion" id="accordion">
+          <div class="card">
+            <div class="card-header bg-secondary m-0" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-transparent text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"aria-expanded="false" aria-controls="collapseTwo">
+                  View second validator code
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <p>
+
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </form>
+
+  <div>
+    <hr>
+    <h1>
+        Test List
+    </h1>
+    <p>
+    Use numbers below to test validators <br>
+    for true responses.<br>
+    </p>
+    <input id="userListInput" type="text" placeholder="add new number to list">
+    <button id="addBtn">
+        Add To List
+    </button>
+    <ul id="list">
+    </ul>
+    
+    <div class="accordion" id="accordion">
+      <div class="card">
+        <div class="card-header bg-secondary m-0" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-transparent text-dark collapsed" data-toggle="collapse" data-target="#collapseThree"aria-expanded="false" aria-controls="collapseThree">
+              Pre-built numbers for validators
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <p>
+              ("555-555-5555") should return a boolean. <br>
+
+              ("1 555-555-5555") should return true. <br>
+              ("1 (555) 555-5555") should return true. <br>
+              ("5555555555") should return true. <br>
+              ("555-555-5555") should return true. <br>
+              ("(555)555-5555") should return true. <br>
+              ("1(555)555-5555") should return true. <br>
+              ("1 555 555 5555") should return true. <br>
+              ("1 456 789 4444") should return true. <br>
+              <br>
+              ("555-5555") should return false.<br>
+              ("5555555") should return false.<br>
+              ("1 555)555-5555") should return false.<br>
+              ("123**&!!asdf#") should return false.<br>
+              ("55555555") should return false.<br>
+              ("(6054756961)") should return false<br>
+              ("2 (757) 622-7382") should return false.<br>
+              ("0 (757) 622-7382") should return false.<br>
+              ("-1 (757) 622-7382") should return false<br>
+              ("2 757 622-7382") should return false.<br>
+              ("10 (757) 622-7382") should return false.<br>
+              ("27576227382") should return false.<br>
+              ("(275)76227382") should return false.<br>
+              ("2(757)6227382") should return false.<br>
+              ("2(757)622-7382") should return false.<br>
+              ("555)-555-5555") should return false.<br>
+              ("(555-555-5555") should return false.<br>
+              ("(555)5(55?)-5555") should return false.<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

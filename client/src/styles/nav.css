@@ -1,0 +1,76 @@
+nav {
+    height: 3em;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+nav > button {
+    font-size: 1em;
+    background-color: inherit;
+    color: lightgray;
+    border: 1px solid gray;
+    padding: 0.25em;
+    border-radius: 0.25em;
+}
+
+nav > button:hover {
+    background-color: seagreen;
+    color: white;
+}
+
+nav > .user-span {
+    color: white;
+    font-size: 1.5em;
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        height: 3em;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    nav > button {
+        font-size: 1em;
+        background-color: inherit;
+        color: lightgray;
+        border: 1px solid gray;
+        padding: 0.25em;
+        border-radius: 0.25em;
+    }
+
+    nav > button:hover {
+        background-color: seagreen;
+        color: white;
+    }
+}
+@media only screen and (max-width: 500px) {
+    nav {
+        height: 2.5em;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 2em;
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    nav {
+        height: 2.5em;
+        width: 100vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 2em;
+    }
+}

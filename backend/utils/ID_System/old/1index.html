@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="luhnAlgorithm.js" defer ></script>
+    <title>Luhn Tester</title>
+</head>
+<body>
+    <h1>Luhn Generator</h1>
+    <div id="display"></div>
+    <div>
+        <label for="price">Select the number of places between <br>2-32 to be generated (default is 16): <br>
+        <input type="number" id="generator-input" 
+        min="2" 
+        max="32" 
+        step="1" 
+        value="16">
+        </input>
+    </label>
+    <br><br>
+    <p id="luhn-generator">0</p><button id="generator-btn">Generate number</button>
+    </div>
+    <h1>Luhn Tester</h1>
+    <input type="text" id="test-input" value="0"><br>
+    <button class="testNumber">Test Number</button>
+    <p>Your number passed.</p>
+    <h1>
+        Luhn List
+    </h1>
+    <input id="userInput" type="text" placeholder="add new number to list">
+    <button id="addBtn">
+        Add To List
+    </button>
+
+    <ul id="list">
+    </ul>
+
+    <p id="myRandText">The random numbers are: </p>
+<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+Here’s a fun trick to entertain friends and win bar bets: Guess the first number on somebody’s credit card tucked away in their wallet.
+
+You can do that because credit card numbers aren’t random. Using terms that sound like something out of a spy novel — such as MIIs and the Luhn algorithm — you can decode parts of a credit card number and even tell whether it’s fake or valid. That’s because credit card numbers follow patterns established by the International Organization for Standardization.
+
+Credit card numbers don’t only identify your account. Like numbers on a paper check, they provide payment routing information so charges are processed correctly every time you swipe or dip a card into a checkout card reader or type your information into an online form.
+
+Here’s how to decipher a credit card number.
+
+First number
+The first digit on a credit card is like an area code in a phone number. Instead of representing a general geography like 212 for New York City, it represents an industry type, like 4 for a financial institution.
+
+Called an MII, or Major Industry Identifier, the first digit of a credit card number from a major issuer in the U.S. will usually be a 3 through 6.
+
+If it’s a Visa V, +0.77% card, it will always start with a 4, while MasterCards generally start with a 5 — although in 2017 Mastercard MA, +1.14% started issuing some of its numbers starting with 2.
+
+Here are starting numbers for major credit card issuers in the U.S.:
+
+First digit: 2; Credit card issuer: Mastercard (2017)
+First digit: 3; Credit card issuer: American Express AXP, +0.10%  
+First digit: 4; Credit card issuer: Visa
+First digit: 5; Credit card issuer: Mastercard
+First digit: 6; Credit card issuer: Discover DFS, -0.45%  
+The other numbers are for all kinds of identification cards. For instance, 1 and 2 generally are for airlines (not airline credit cards, which are issued by banks); 7 is for petroleum companies; 8 represents telecommunications and health care; 9 is reserved for national numbering systems that a country might want to use.
+
+Middle numbers
+The first six digits, led by the first digit MII we already talked about, are collectively known as the Issuer Identification Number — called Bank Identification Numbers in the payments industry. They help identify the bank or institution that issued the card.
+
+After that, the following numbers, excluding the last digit, represent the customer’s account, but that string usually isn’t the same as the person’s bank account number.
+Last number
+When you swipe a credit card, the number is sent to the processor for verification, in part to determine whether the digits conform to the so-called Luhn algorithm. If they don’t, the number is invalid.
+
+That’s why the last digit in the string is called the “check digit,” which completes the algorithm so it is divisible by 10. It can quickly identify mistakes when numbers are manually transcribed — for example, if you mistyped your credit card number during online shopping.
+
+If you want to get really nerdy, check your own cards with the Luhn algorithm, which employs simple math but is a little tricky to explain:
+
+For a card with 16 digits, which includes Visa, Mastercard and Discover cards:
+
+Double every other digit (starting with the first digit) and write down the resulting series of numbers
+Add together the individual digits that you wrote down. (If you have a two-digit number, combine those two digits before adding. For instance, say you doubled a 7 to get 14 — add the 1 and 4 to get 5, and then use that 5 in your total.)
+Go back to your card number and add up the digits you ignored, including the last digit (no doubling)
+Add the two sums
+If the result ends in a zero, the card is valid.
+
+If the card has 15 digits, namely an American Express card in the U.S., start with the second digit for doubling and use the same instructions.
+
+‘Guessing’ numbers
+Now that you understand the numbers, you can see how you might develop a party-trick routine of guessing the starting number of someone’s concealed credit card.
+
+“Tell me what type of card you have, and I’ll guess the first number.” If it’s a Visa, it will be 4. If it’s Mastercard, guess 5, and if that’s wrong guess 2.
+
+Or offer to guess the last digit, assuming they’re willing to give you all the others. Use an online calculator for the Luhn algorithm, such as one found here.

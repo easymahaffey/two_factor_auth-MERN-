@@ -1,0 +1,109 @@
+@media only screen and (max-width: 500px) {
+    .menu-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 25vw;
+        height: 100vh;
+        background-color: var(--light-menu-contrast-brown);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-wrapper>span {
+        width: 25vw;
+        height: 20vh;
+        display: flex;
+        margin-top: 0;
+        padding-bottom: 0.25em;
+        background-color: var(--dark-menu-contrast-brown);
+        color: var(--special-bling-text-brown);
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1em;
+        border-right: 1px solid var(--dark-menu-contrast-brown);
+    }
+
+    .menu-wrapper>button {
+        width: 25vw;
+        height: 20vh;
+        border-bottom: 1px solid var(--dark-menu-contrast-brown);
+        border-right: 1px solid var(--dark-menu-contrast-brown);
+    }
+
+    .menu-wrapper>button:hover {
+        background-color: var(--special-bling-text-brown);
+    }
+
+    .menu-wrapper>.menu-logout-btn {
+        border-bottom: none;
+        border-right: 1px solid var(--dark-menu-contrast-brown);
+    }
+
+    .menu-wrapper>.close-menu-btn {
+        background-color: var(--dark-menu-contrast-brown);
+        border-bottom: none;
+        padding-bottom: 2em;
+        color: var(--light-text-brown);
+        height: 20vh;
+    }
+
+    .menu-wrapper>.close-menu-btn:hover {
+        background-color: var(--special-button-contrast-brown);
+        color: black;
+        border-top: 1px solid var(--dark-menu-contrast-brown);
+    }
+}
+
+@media only screen and (max-width: 200px) {
+    .menu-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100vw;
+        background-color: var(--light-menu-contrast-brown);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-wrapper>span {
+        width: 100vw;
+        height: 3.5em;
+        display: flex;
+        margin-top: 0;
+        padding-bottom: 0.25em;
+        background-color: var(--dark-menu-contrast-brown);
+        color: var(--special-bling-text-brown);
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1em;
+    }
+
+    .menu-wrapper>button {
+        width: 100vw;
+        height: 4em;
+        border-bottom: 1px solid var(--dark-menu-contrast-brown);
+    }
+
+    .menu-wrapper>button:hover {
+        background-color: var(--special-bling-text-brown);
+    }
+
+    .menu-wrapper>.menu-logout-btn {
+        border-bottom: none;
+    }
+
+    .menu-wrapper>.close-menu-btn {
+        background-color: var(--dark-menu-contrast-brown);
+        border-bottom: none;
+        color: var(--light-text-brown);
+        height: 4.75em;
+    }
+
+    .menu-wrapper>.close-menu-btn:hover {
+        background-color: var(--special-button-contrast-brown);
+        color: black;
+    }
+}

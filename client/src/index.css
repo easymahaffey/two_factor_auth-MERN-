@@ -1,0 +1,37 @@
+@import './styles/hamburger.css';
+@import './styles/nav.css';
+@import './styles/landing.css';
+@import './styles/contact-card.css';
+@import './styles/modal.css';
+@import './styles/menu.css';
+@import './styles/nav-modals.css';
+@import './styles/initnav.css';
+@import './styles/delete-user.css';
+@import './styles/delete-user-modal.css';
+
+*, html, body, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+:root {
+    --light-background-brown: bisque;
+    --light-background-brown-semiopaque: rgba(255,228,196,.8);
+    --dark-background-accent-brown: rgb(40, 25, 5);
+    --medium-background-accent-brown: burlywood;
+    --special-offset-color-brown: rgb(236, 214, 184);
+    --light-text-brown: white;
+    --special-bling-text-brown: gold;
+    --light-menu-contrast-brown: rgb(166, 185, 202);
+    --dark-menu-contrast-brown: rgb(6, 84, 152);
+    --special-button-contrast-brown: goldenrod;
+    --larger-dark-menu-contrast-brown: rgb(22, 113, 62);
+    --larger-light-menu-contrast-brown: rgb(173, 200, 185);
+}

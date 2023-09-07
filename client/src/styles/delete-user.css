@@ -1,0 +1,23 @@
+.update-delete {
+    width: 70vw;
+    height: 4em;
+    background-color: coral;
+}
+
+.update-delete:hover {
+    background-color: orangered;
+    color: white;
+}
+
+@media only screen and (max-width: 200px){
+    .update-delete{
+        width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .update-delete {
+        width: 40vw;
+        margin-bottom: 1em;
+    }
+}
